@@ -14,7 +14,7 @@ Below is a table of contents. Following that, I explain the structure of the scr
 | LICENSE                                             | License of this repository                                                                                                                           | License          |
 
 ## Scripts
-At the beginning of each script, I import all packages that are needed. If you do not have one of the packages, you can install them with !pip install PACKAGE. I worked in Jupyter notebook scripts with python v3.8.5. The main packages used are pandas v1.3.4, NumPy v.1.21.4, GeoPandas v0.10.1 and OSMnx v1.1.2. Output is stored within the Jupyter notebook script, but I included optional "checkpoints", where you may save data frames or figures to csv or pdf for later usage (note: It was necessary for me to work in Jupyter notebook due to the internal structure at CBS).
+At the beginning of each script, I import all packages that are needed. If you do not have one of the packages, you can install them with !pip install PACKAGE. I worked in Jupyter notebook scripts with python v3.8.5. The main packages used are pandas v1.3.4, NumPy v.1.21.4, GeoPandas v0.10.1 and OSMnx v1.1.2. Output is stored within the Jupyter notebook script, but I included optional "checkpoints", which you can uncomment to save data frames or figures to csv or pdf for later usage (note: It was necessary for me to work in Jupyter notebook due to the internal structure at CBS).
 </br>The scripts should be run in the following order and are structured as follows:
 <ol>
   <li><b>load_preprocess_sensors.ipynb</b></li>
