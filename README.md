@@ -3,7 +3,7 @@
 This archive contains the code to reproduce the results from my study on traffic demand modeling. The study was done in collaboration with [CBS](https://www.cbs.nl/en-gb), the Dutch Central Agency for Statistics. The study is my thesis project, which was supervised by [Dr. Peter Lugtig](https://www.uu.nl/staff/plugtig) from Utrecht University and Yvonne Gootzen from CBS. It was approved by the Ethical Review Board of the Faculty of Social and Behavioural Sciences of Utrecht University under file number 21-2133.
 </br> 
 </br>
-In this repository, there are three jupyter notebook scripts, two csv files and a license. 
+In this repository, there are three jupyter notebook scripts, a csv file and a license. 
 Below is a table of contents. Following that, I explain the structure of the scripts and the csv files, as well as other data that was used in this project and cannot be published openly. I describe alternatives to generate synthetic data. 
 | File                                                | Purpose                                                                                                                                              | Type             |
 |-----------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|------------------|
@@ -11,7 +11,6 @@ Below is a table of contents. Following that, I explain the structure of the scr
 | link_obs_exp.ipynb                                  | Linking observed to expected traffic counts and creating figures for section 4 of thesis                                                             | Jupyter notebook |
 | inspect_model_c.ipynb                               | Inspecting and modeling the calibration factor and creating figures and tables for section 5 and appendix of thesis                                  | Jupyter notebook |
 | edges_intensities.csv                               | Aggregated and preprocessed observed traffic counts from traffic loop sensors                                                                        | Data             |
-| Regionale_kerncijfers_Nederland_03022022_140149.csv | Population density per municipality, obtained from CBS' [open data protal](https://opendata.cbs.nl/statline/#CBS/nl/dataset/70072ned/table?dl=5A35F) | Data             |
 | LICENSE                                             | License of this repository                                                                                                                           | License          |
 
 ## Scripts
