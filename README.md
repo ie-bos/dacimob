@@ -1,6 +1,6 @@
 # Research Archive
 #### by Inan Bostanci
-This archive contains the code to reproduce the results from my study on traffic demand modeling. The study combines traffic loop sensor data and administrative data to validate and calibrate traffic estimations on a nationwide level. It was done in collaboration with [CBS](https://www.cbs.nl/en-gb), the Dutch Central Agency for Statistics. The study is my thesis project, which was supervised by [Dr. Peter Lugtig](https://www.uu.nl/staff/plugtig) from Utrecht University and Yvonne Gootzen from CBS. It was approved by the Ethical Review Board of the Faculty of Social and Behavioural Sciences of Utrecht University under file number 21-2133.
+This archive contains the code to reproduce the results from my study on traffic demand modeling. The study combines traffic loop sensor data and administrative data to validate and calibrate traffic estimations on a nationwide level. It was done in collaboration with [CBS](https://www.cbs.nl/en-gb), the Dutch Central Agency for Statistics. The study is my thesis project, which was supervised by [Dr. Peter Lugtig](https://www.uu.nl/staff/plugtig) from Utrecht University and Yvonne Gootzen from CBS. It was approved by the Ethical Review Board of the Faculty of Social and Behavioural Sciences of Utrecht University under file number 21-2133. 
 </br> 
 </br>
 In this repository, there are three jupyter notebook scripts, a csv file and a license. 
