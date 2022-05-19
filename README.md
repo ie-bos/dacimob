@@ -1,14 +1,22 @@
 # Research Archive
-
-This archive contains the code to reproduce the results from my study on project on traffic demand modeling. The study was done in collaboration with [CBS](https://www.cbs.nl/en-gb), the Dutch Central Agency for Statistics. The study is my thesis project, which was supervised by [Dr. Peter Lugtig](https://www.uu.nl/staff/plugtig) from Utrecht University and Yvonne Gootzen from CBS. It was approved by the Ethical Review Board of the Faculty of Social and Behavioural Sciences of Utrecht University under file number 21-2133.
+#### by Inan Bostanci
+This archive contains the code to reproduce the results from my study on traffic demand modeling. The study was done in collaboration with [CBS](https://www.cbs.nl/en-gb), the Dutch Central Agency for Statistics. The study is my thesis project, which was supervised by [Dr. Peter Lugtig](https://www.uu.nl/staff/plugtig) from Utrecht University and Yvonne Gootzen from CBS. It was approved by the Ethical Review Board of the Faculty of Social and Behavioural Sciences of Utrecht University under file number 21-2133.
 </br> 
 </br>
-In this repository, there are three jupyter notebook scripts, two csv files and one pdf. The pdf is the thesis that describes the background and the research project, shows and discusses the results. I highly recommend reading this pdf before diving into the scripts. 
-Following, I explain the structure of the scripts and the csv files, as well as other data that was used in this project and cannot be published openly. I describe alternatives to generate synthetic data. 
+In this repository, there are three jupyter notebook scripts, two csv files and a license. 
+Below is a table of contents. Following that, I explain the structure of the scripts and the csv files, as well as other data that was used in this project and cannot be published openly. I describe alternatives to generate synthetic data. 
+| File                                                | Purpose                                                                                                                                              | Type             |
+|-----------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|------------------|
+| load_preprocess_sensors.ipynb                       | Preprocessing traffic loop sensor data                                                                                                               | Jupyter notebook |
+| link_obs_exp.ipynb                                  | Linking observed to expected traffic counts and creating figures for section 4 of thesis                                                             | Jupyter notebook |
+| inspect_model_c.ipynb                               | Inspecting and modeling the calibration factor and creating figures and tables for section 5 and appendix of thesis                                  | Jupyter notebook |
+| edges_intensities.csv                               | Aggregated and preprocessed observed traffic counts from traffic loop sensors                                                                        | Data             |
+| Regionale_kerncijfers_Nederland_03022022_140149.csv | Population density per municipality, obtained from CBS' [open data protal](https://opendata.cbs.nl/statline/#CBS/nl/dataset/70072ned/table?dl=5A35F) | Data             |
+| LICENSE                                             | License of this repository                                                                                                                           | License          |
 
 ## Scripts
-At the beginning of each script, I import all packages that are needed. If you do not have one of the packages, you can install them with !pip install PACKAGE. I worked in Jupyter notebook scripts with python v3.8.5.
-</br>The scripts are structured as follows:
+At the beginning of each script, I import all packages that are needed. If you do not have one of the packages, you can install them with !pip install PACKAGE. I worked in Jupyter notebook scripts with python v3.8.5. The main packages used are pandas v1.3.4, NumPy v.1.21.4, GeoPandas v0.10.1 and OSMnx v1.1.2. 
+</br>The scripts should be run in the following order and are structured as follows:
 <ol>
   <li><b>load_preprocess_sensors.ipynb</b></li>
   <ol>
@@ -40,16 +48,9 @@ At the beginning of each script, I import all packages that are needed. If you d
   <ol>
 This csv contains preprocessed and aggregated traffic sensor data. Observed traffic counts are provided by the <a href=https://www.ndw.nu/>Nationaal Dataportaal</a>. I used a reformatted version of this data that is stored on a CBS server. If you do not have access to CBS, you can load the preprocessed and aggregated data that is provided in this csv.
   </ol>
-  <li><b>inspect_model_c.ipynb</b></li>
-   <ol>
-     To make sure you don't have to load the entire road network from OSM again, I call the stored objects at the beginning of this script.
-     After that, I inspect the calibration factor and the quality of the expected counts as an estimate for the observed counts visually and numerically.
-     I then run multiple "calibration models" that I compare, to predict the calibration factor on road segments that do not have observed counts.
-     Finally, I inspect whether the calibration on the basis of the calibration model improved the expected counts both visually and numerically.
-     </ol>
-  <li><b>Regionale_kerncijfers_Nederland_03022022_140149.csv</b></li>
+  <li><b>Regional data</b></li>
   <ol>
-    This file is a csv that contains the population density of each municipality in 2019. The source of this data is the open data portal of CBS, you can directly access it <a href=https://opendata.cbs.nl/statline/#CBS/nl/dataset/70072ned/table?dl=5A35F">here</a>. The population density is used as a predictor to model the calibration factor in script 3. Unfortunately, you also need to get the municipality that the sensor is located in. I did this using a shapefile from CBS, which I cannot upload publically because it is not mine. If you do not have access to the internal CBS server, you can either discard the population density as a predictor, which will not have a large effect on the result. Or you can look for other public shapefiles for the Netherlands, which should be available. 
+    In script 3, I use a csv file that contains the population density of each municipality in 2019. The source of this data is the open data portal of CBS, you can directly access it <a href=https://opendata.cbs.nl/statline/#CBS/nl/dataset/70072ned/table?dl=5A35F">here</a>. I do not hold the license to this data, so you have to fetch the data and create your own csv. The population density is used as a predictor to model the calibration factor in script 3. Unfortunately, you also need to get the municipality that the sensor is located in. I did this using a shapefile from CBS, which I cannot upload publically because it is not mine. If you do not have access to the internal CBS server, you can either discard the population density as a predictor, which will not have a large effect on the result. Or you can look for other public shapefiles for the Netherlands, which should be available on the internet. 
   </ol>
   <li><b>Infrastructure data</b></li>
   <ol>
