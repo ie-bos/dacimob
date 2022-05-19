@@ -1,6 +1,6 @@
 # Research Archive
 
-This archive contains the code to reproduce the results from my study on project on traffic demand modeling. The study was done in collaboration with [CBS](https://www.cbs.nl/en-gb), the Dutch Central Agency for Statistics, mainly with Yvonne Gootzen. The study was approved by the Ethical Review Board of the Faculty of Social and Behavioural Sciences of Utrecht University under file number 21-2133.
+This archive contains the code to reproduce the results from my study on project on traffic demand modeling. The study was done in collaboration with [CBS](https://www.cbs.nl/en-gb), the Dutch Central Agency for Statistics. The study is my thesis project, which was supervised by [Dr. Peter Lugtig](https://www.uu.nl/staff/plugtig) from Utrecht University and Yvonne Gootzen from CBS. It was approved by the Ethical Review Board of the Faculty of Social and Behavioural Sciences of Utrecht University under file number 21-2133.
 </br> 
 </br>
 In this repository, there are three jupyter notebook scripts, two csv files and one pdf. The pdf is the thesis that describes the background and the research project, shows and discusses the results. I highly recommend reading this pdf before diving into the scripts. 
